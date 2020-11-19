@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror/theme/cobalt.css">
+    <title>text editor</title>
+
+</head>
+<body>
+    <h2>using codemirror</h2>
+    <textarea name="editor" id="editor" cols="30" rows="10">
+        <p>i am a p tag</p>
+    </textarea>
+
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/addon/edit/closetag.js"></script>
+
+    <script>
+        const editor = CodeMirror.fromTextArea(document.getElementById('editor'),
+         {
+            mode : "xml",
+            theme : "cobalt",
+            lineNumbers : true,
+            autoCloseTags : true
+        });
+    </script>
+</body>
+</html>
